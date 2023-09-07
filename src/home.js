@@ -15,9 +15,9 @@ export const loadHomePage = () => {
   headline.classList.add('headline');
   ctaButton.classList.add('cta-button', 'home-cta-button');
 
-  headline.textContent = 'Salads with freshness in every bite!';
+  headline.textContent = 'First we eat than we do everything else !';
   homeParagraph.textContent =
-    "Hungry and craving some tasty and nutritious salads? We've got you!";
+    "Bless the food before us the family beside us & the love between us !";
   ctaButton.textContent = 'discover menu';
 
   arrowRightIcon.setAttribute('src', 'components/icons/arrow-right.svg');
