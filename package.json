@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/emuel-vassallo/restaurant-page.git"
+    "url": "git+hhttps://github.com/Saharshdiwan/ffc.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/emuel-vassallo/restaurant-page/issues"
+    "url": "https://github.com/Saharshdiwan/ffc/issues"
   },
-  "homepage": "https://github.com/emuel-vassallo/restaurant-page#readme",
+  "homepage": "https://github.com/Saharshdiwan/ffc#readme",
   "keywords": [],
   "devDependencies": {
     "webpack": "^5.73.0",
