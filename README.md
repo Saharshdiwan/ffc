@@ -1,59 +1,57 @@
-# Restaurant Page
+# FFC - Funchick Fried Chicken Website
 
-A simple restaurant page for a ficticious salad bar. It utilizes Webpack for module bundling and was created as part of The Odin Project's [curriculum](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page).
-
-### [Live Demo](https://emuel-vassallo.github.io/restaurant-page/)
+Welcome to the GitHub repository for FFC Page, an exciting Funchick Fried Chicken (FFC) website! This project was crafted as part of The Odin Project's curriculum. Explore this mouthwatering project live by visiting the [Live Demo](https://emuel-vassallo.github.io/restaurant-page/).
 
 ## Showcase
 
-### Home
+### Home Page
 
-#### Light Theme
+- **Light Theme**
+  ![Home Page Light Theme](dist/components/screenshots/home-light.png)
 
-![home page light theme screenshot](dist/components/screenshots/home-light.png)
+- **Dark Theme**
+  ![Home Page Dark Theme](dist/components/screenshots/home-dark.png)
 
-#### Dark Theme
+### Menu Page
 
-![home page dark theme screenshot](dist/components/screenshots/home-dark.png)
+- **Light Theme**
+  ![Menu Page Light Theme](dist/components/screenshots/menu-light.png)
 
-### Menu
+- **Dark Theme**
+  ![Menu Page Dark Theme](dist/components/screenshots/menu-dark.png)
 
-#### Light Theme
+### Contact Page
 
-![menu page light theme screenshot](dist/components/screenshots/menu-light.png)
+- **Light Theme**
+  ![Contact Page Light Theme](dist/components/screenshots/contact-light.png)
 
-#### Dark Theme
+- **Dark Theme**
+  ![Contact Page Dark Theme](dist/components/screenshots/contact-dark.png)
 
-![menu page dark theme screenshot](dist/components/screenshots/menu-dark.png)
+## Technologies Used
 
-### Contact
-
-#### Light Theme
-
-![contact page light theme screenshot](dist/components/screenshots/contact-light.png)
-
-#### Dark Theme
-
-![contact page dark theme screenshot](dist/components/screenshots/contact-dark.png)
-
-## Built With
+This delectable project was prepared using the following ingredients:
 
 - HTML
 - CSS
 - JavaScript
 - Webpack
 
-## Features
+## Key Features
 
-- Fluid animations
-- Smooth hover effects
-- Simple and minimal UI
+Savor the following features:
 
-## TODO
+- Fluid animations 🍃
+- Smooth hover effects 🌟
+- A simple and minimalistic user interface 🎨
 
-- [ ] Fly the image of the item just added to cart to the cart icon in the header
+## To-Do List
 
-## Credits and Inspiration
+Delightful future additions:
+
+- [ ] Implement an animation for items added to the cart to fly towards the cart icon in the header 🛒
+
+## Credits and Inspirations
 
 ### Assets
 
@@ -61,7 +59,9 @@ A simple restaurant page for a ficticious salad bar. It utilizes Webpack for mod
 - [Icons](https://feathericons.com/)
 - [PNGs](https://www.pngwing.com/)
 
-### Designs
+### Design Inspirations
+
+Find inspiration from these culinary creatives:
 
 - [Food landing page](https://dribbble.com/shots/16187552-Madang-Food-Landing-Page) by [Arki Rachman](https://dribbble.com/arkirachman)
 - [Food delivery service design](https://www.behance.net/gallery/140356355/Food-delivery-service-Web-UI) by [Anupam Ghosh](https://www.behance.net/anupamghosh1)
