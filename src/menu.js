@@ -92,7 +92,7 @@ export const loadMenuPage = () => {
     menuHeading.textContent = 'Our Menu';
     saladName.textContent = salad.name;
     saladIngredients.textContent = salad.ingredients;
-    saladPrice.textContent = `€${salad.price}`;
+    saladPrice.textContent = `₹${salad.price}`;
 
     saladCard.style.animationDuration = `${animationDuration}s`;
     animationDuration += initalAnimationDuration;

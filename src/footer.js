@@ -9,19 +9,19 @@ export const loadFooter = () => {
   const dividerSymbol = '⸱';
   footerText.textContent = '';
 
-  devNameLink.textContent = 'Emuel Vassallo';
-  devNameLink.setAttribute('href', 'https://github.com/emuel-vassallo');
+  devNameLink.textContent = 'FUNCHICK FRIED CHICKEN';
+  devNameLink.setAttribute('href', 'https://www.instagram.com/funchick_fried_chicken_/');
   devNameLink.setAttribute('target', '_blank');
 
   const year = new Date().getFullYear();
   copyrightSpan.textContent = `© ${year}`;
 
-  sourceCodeLink.textContent = 'Source code';
-  sourceCodeLink.setAttribute(
-    'href',
-    'https://github.com/emuel-vassallo/restaurant-page'
-  );
-  sourceCodeLink.setAttribute('target', '_blank');
+  // sourceCodeLink.textContent = 'Source code';
+  // sourceCodeLink.setAttribute(
+  //   'href',
+  //   'https://github.com/emuel-vassallo/restaurant-page'
+  // );
+  // sourceCodeLink.setAttribute('target', '_blank');
 
   footerText.append(
     'Made with ❤️ by',
@@ -29,7 +29,7 @@ export const loadFooter = () => {
     dividerSymbol,
     copyrightSpan,
     dividerSymbol,
-    sourceCodeLink
+    //sourceCodeLink
   );
   footerContainer.append(footerText);
 };
