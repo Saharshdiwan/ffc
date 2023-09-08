@@ -103,7 +103,7 @@ export const loadContactPage = () => {
   formSubmitButton.setAttribute('type', 'submit');
 
   iframeMap.src =
-    'https://www.openstreetmap.org/export/embed.html?bbox=-1.3126891851425173%2C53.69312690948469%2C-1.3092076778411867%2C53.69459593405764&amp;layer=mapnik';
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.9767224286506!2d72.57919266316512!3d23.124056900004195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e833fe724f1f1%3A0x104487f486449346!2sFunchick%20fried%20chicken!5e1!3m2!1sen!2sin!4v1694106655485!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade';
 
   formFirstNameDiv.append(formFirstNameLabel, formFirstNameInput);
   formSecondNameDiv.append(formSecondNameLabel, formSecondNameInput);

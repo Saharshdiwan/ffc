@@ -37,8 +37,8 @@ export const loadHeader = () => {
   cartButton.classList.add('header-icon', 'cart-icon');
   ctaButton.classList.add('cta-button', 'tab-link');
 
-  logo.src = 'components/images/logo.png';
-  cartIcon.src = 'components/icons/black-shopping-bag.svg';
+  logo.src = 'components/images/logo1.png';
+  cartIcon.src = 'components/icons/-shopping-bag.svg';
   cartButton.title = 'Your Cart';
   themeToggleSwitch.title = 'Toggle theme';
   themeToggleCheckbox.type = 'checkbox';
@@ -59,14 +59,13 @@ export const loadHeader = () => {
   menuLink.textContent = 'menu';
   contactLink.textContent = 'contact';
   ctaButton.textContent = 'order now';
-
-  homeLinkListItem.append(homeLink);
+   homeLinkListItem.append(homeLink);
   menuLinkListItem.append(menuLink);
   contactLinkListItem.append(contactLink);
   tabLinks.append(homeLinkListItem, menuLinkListItem, contactLinkListItem);
   leftElementsContainer.append(logo, tabLinks);
   themeToggleSwitch.append(themeToggleCheckbox, themeToggleSlider);
-  cartButton.append(cartIcon);
+  //cartButton.append(cartIcon); done bhai
   rightElementsContainer.append(themeToggleSwitch, cartButton, ctaButton);
 
   headerContainer.append(leftElementsContainer, rightElementsContainer);
@@ -79,10 +78,10 @@ const changeIconsColor = (isThemeDark) => {
   const headerLogo = document.querySelector('.header-logo');
   if (isThemeDark) {
     headerLogo.src = 'components/images/logo-dark-mode.png';
-    cartIcon.src = 'components/icons/white-shopping-bag.svg';
+   // cartIcon.src = 'components/icons/white-shopping-bag.svg';
     return;
   }
-  headerLogo.src = 'components/images/logo.png';
+  headerLogo.src = 'components/images/logo1.png';
   cartIcon.src = 'components/icons/black-shopping-bag.svg';
 };
 
