@@ -62,7 +62,7 @@ body {
   gap: 64px;
   background-color: var(--bg);
   color: var(--color);
-  padding: 16px 18vw;
+  padding: 16px 18vw; 
   min-height: 100vh;
   transition: background-color 0.3s ease-in-out;
 }
@@ -391,19 +391,20 @@ header {
 .about-image:hover {
   transform: translateY(-6px);
 }
-/* story Image */
-
-.story-image {
-  width: 36vw;
-  max-width: 550px;
-  animation: 0.5s ease-in-out 0s 1 slideInFromRight;
-  transition: transform 0.3s ease-in-out;
-  user-select: none;
-  filter: var(--image-drop-shadow);
+* .story {
+  margin-top: 5rem;
+  background-image: url('components/images/story-image.jpg') !important;
+     background-size: 100% ;/*Optional: Scale the image to cover the entire element */
+    background-repeat: no-repeat; /* Optional: Prevent the image from repeating */
+      
+    
 }
-
-.about-image:hover {
-  transform: translateY(-6px);
+.story-para{
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 20px;
+  animation: 0.7s ease-in-out 0s 1 slideInFromLeft2;
+ 
 }
 /* -- Menu -- */
 

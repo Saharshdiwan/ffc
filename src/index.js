@@ -64,3 +64,4 @@ loadFooter();
 switchTabOnClick();
 addCtaEventListener();
 toggleDarkTheme();
+

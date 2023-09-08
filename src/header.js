@@ -38,7 +38,7 @@ export const loadHeader = () => {
   ctaButton.classList.add('cta-button', 'tab-link');
 
   logo.src = 'components/images/logo1.png';
-  cartIcon.src = 'components/icons/-shopping-bag.svg';
+ // cartIcon.src = 'components/icons/-shopping-bag.svg';
   cartButton.title = 'Your Cart';
   themeToggleSwitch.title = 'Toggle theme';
   themeToggleCheckbox.type = 'checkbox';
@@ -46,7 +46,7 @@ export const loadHeader = () => {
     window.matchMedia &&
     window.matchMedia('(prefers-color-scheme: dark)').matches
   )
-    themeToggleCheckbox.checked = true;
+    themeToggleCheckbox.checked = false;
 
   logo.setAttribute('data-tab-link', 'home');
   homeLink.setAttribute('data-tab-link', 'home');
