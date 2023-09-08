@@ -83,8 +83,8 @@ export const loadMenuPage = () => {
     saladName.classList.add('salad-card-name');
     saladIngredients.classList.add('salad-card-ingredients');
     saladPrice.classList.add('salad-card-price');
-    addToCartButton.classList.add('salad-card-add-to-cart');
-    plusIcon.classList.add('salad-card-plus-icon');
+    //addToCartButton.classList.add('salad-card-add-to-cart');
+   // plusIcon.classList.add('salad-card-plus-icon');
 
     saladImage.src = salad.image;
     plusIcon.src = 'components/icons/plus.svg';
@@ -103,7 +103,7 @@ export const loadMenuPage = () => {
       saladName,
       saladIngredients,
       saladPrice,
-      addToCartButton
+     // addToCartButton
     );
 
     saladGrid.append(saladCard);
@@ -113,22 +113,22 @@ export const loadMenuPage = () => {
   contentDiv.append(menuContainer);
 };
 
-export const updateCartOnClick = () => {
-  const addToCartButtons = document.querySelectorAll('.salad-card-add-to-cart');
-  const cartIcon = document.querySelector('.cart-icon');
-  for (const button of addToCartButtons) {
-    button.addEventListener('click', () => {
-      cartIcon.classList.add('shake');
-      cartIcon.addEventListener('animationend', () =>
-        cartIcon.classList.remove('shake')
-      );
-      const currentItemCount = parseInt(cartIcon.dataset.count);
-      if (currentItemCount >= 9) {
-        cartIcon.dataset.count = '9+';
-        return;
-      }
-      cartIcon.dataset.count = currentItemCount + 1;
-      cartIcon.classList.add('cart-has-item');
-    });
-  }
-};
+// export const updateCartOnClick = () => {
+//   const addToCartButtons = document.querySelectorAll('.salad-card-add-to-cart');
+//   const cartIcon = document.querySelector('.cart-icon');
+//   for (const button of addToCartButtons) {
+//     button.addEventListener('click', () => {
+//       cartIcon.classList.add('shake');
+//       cartIcon.addEventListener('animationend', () =>
+//         cartIcon.classList.remove('shake')
+//       );
+//       const currentItemCount = parseInt(cartIcon.dataset.count);
+//       if (currentItemCount >= 9) {
+//         cartIcon.dataset.count = '9+';
+//         return;
+//       }
+//       cartIcon.dataset.count = currentItemCount + 1;
+//       cartIcon.classList.add('cart-has-item');
+//     });
+//   }
+// };

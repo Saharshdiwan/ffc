@@ -2,7 +2,7 @@ import { loadHeader, toggleDarkTheme } from './header.js';
 import { loadHomePage } from './home.js';
 import { loadFooter } from './footer.js';
 import { loadMenuPage } from './menu.js';
-import { updateCartOnClick } from './menu.js';
+//import { updateCartOnClick } from './menu.js';
 import { loadContactPage } from './contact.js';
 
 const emptyContentDiv = () => {
@@ -38,7 +38,7 @@ const loadNewTab = (clickedTabName) => {
   loadPage(tabLink);
   removeSelectedTabClass();
   addSelectedTabClass(tabLink);
-  if (tabLink === 'menu') updateCartOnClick();
+  //if (tabLink === 'menu') updateCartOnClick();
 };
 
 const addCtaEventListener = () => {
