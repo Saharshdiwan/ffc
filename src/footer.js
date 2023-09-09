@@ -11,7 +11,7 @@ export const loadFooter = () => {
 
   devNameLink.textContent = 'FUNCHICK FRIED CHICKEN';
   devNameLink.setAttribute('href', 'https://www.instagram.com/funchick_fried_chicken_/');
-  devNameLink.setAttribute('target', '_blank');//aa su ch?? hyperlink mate attribute apde ajj joie chi
+  devNameLink.setAttribute('target', '_blank');
  
 
   const year = new Date().getFullYear();
