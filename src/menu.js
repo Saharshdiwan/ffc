@@ -12,6 +12,8 @@ const addSaladToMenu = (name, image, ingredients, price) => {
   menu = [...menu, newSalad];
 };
 
+
+
 addSaladToMenu(
   'Spinach Strawberry Salad',
   'components/salad-images/salad1.png',
@@ -55,21 +57,20 @@ addSaladToMenu(
 );
 
 export const loadMenuPage = () => {
+  
+ 
   const contentDiv = document.querySelector('#content');
-
+  const menuContainerDiv = document.createElement('div');
   const menuContainer = document.createElement('div');
   const menuHeading = document.createElement('h1');
   const saladGrid = document.createElement('div');
-
   menuContainer.classList.add('menu');
   saladGrid.classList.add('salad-grid');
-
-  const initalAnimationDuration = 0.17;
+    const initalAnimationDuration = 0.17;
   let animationDuration = initalAnimationDuration;
 
   for (const salad of menu) {
     const saladCard = document.createElement('div');
-
     const saladImage = document.createElement('img');
     const saladName = document.createElement('h2');
     const saladIngredients = document.createElement('p');
@@ -77,7 +78,8 @@ export const loadMenuPage = () => {
     const addToCartButton = document.createElement('button');
     const plusIcon = document.createElement('img');
 
-    menuHeading.classList.add('page-heading');
+    menuContainerDiv.classList.add('menu-heading-div')
+    menuHeading.classList.add('menu-heading');
     saladCard.classList.add('salad-card');
     saladImage.classList.add('salad-card-image');
     saladName.classList.add('salad-card-name');
@@ -108,8 +110,7 @@ export const loadMenuPage = () => {
 
     saladGrid.append(saladCard);
   }
-
-  menuContainer.append(menuHeading, saladGrid);
+  menuContainer.append(menuHeading,saladGrid);
   contentDiv.append(menuContainer);
 };
 

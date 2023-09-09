@@ -276,6 +276,16 @@ header {
 .page-heading {
   animation: 0.5s ease-in-out 0s 1 slideInFromTopMenu;
 }
+.menu-heading-div{
+  width: 100%;
+  height: 1000px;
+  background-image: url(components/salad-images/menu-image.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.menu-heading{
+  animation: 0.5s ease-in-out 0s 1 slideInFromTopMenu;
+}
 
 /* -- Home -- */
 
@@ -395,8 +405,8 @@ header {
   
   margin-top: 5rem;
   background-image: url('components/images/story-image.jpg') ;
-    background-size: 100% 100% ;/*Optional: Scale the image to cover the entire element */
-     background-repeat: no-repeat ; /*Optional: Prevent the image from repeating    */
+  background-size: 100% 100% ;/*Optional: Scale the image to cover the entire element */
+  background-repeat: no-repeat ; /*Optional: Prevent the image from repeating    */
     
 }
 
@@ -515,6 +525,10 @@ header {
 
 /* Contact */
 
+.contact-info{
+  padding-bottom: 1%;
+  margin-bottom: 1%;
+}
 .contact {
   display: flex;
   flex-direction: column;
@@ -743,4 +757,29 @@ footer a:hover {
   100% {
     transform: translateX(0);
   }
+}
+
+
+/* rating */
+
+
+.rating {
+  font-size: 24px;
+  color: gold;
+  cursor: pointer;
+}
+
+.user-review {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Style for selected stars */
+.rating .star.active {
+  color: gold;
+}
+
+/* Style for unselected stars */
+.rating .star:not(.active) {
+  color: gray;
 }

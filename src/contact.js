@@ -1,4 +1,4 @@
-export const loadContactPage = () => {
+ export const loadContactPage = () => {
   const contentDiv = document.querySelector('#content');
 
   const contactContainer = document.createElement('div');
@@ -34,6 +34,36 @@ export const loadContactPage = () => {
 
   const formSubmitButton = document.createElement('button');
 
+  
+  const contactInformation = document.createElement('div');
+  const phoneInformation = document.createElement('div');
+  const emailInformation = document.createElement("div");
+  const emailContactText = document.createElement("p");
+  const emailContact = document.createElement("a");
+  const emailIcon= document.createElement('img');
+  const phoneIcon=document.createElement('img');
+  const phoneContactText = document.createElement("p");
+  const phoneContact = document.createElement("a");
+  contactInformation.classList.add('contact-info');
+//phoneIcon.classList.add('fa-phone');
+//emailIcon.classList.add('fa-envelope');
+emailContactText.textContent='Email Adress';
+emailContact.setAttribute('href', 'mailto:saharshsa29@gmail.com');
+phoneContactText.textContent='Phone Number';
+phoneContact.setAttribute('href', 'tel:+919106768066');
+
+phoneIcon.src = 'components/icons/phone.svg';
+emailIcon.src='components/icons/email.svg'; 
+
+emailInformation.append(emailIcon,emailContactText,emailContact);
+phoneInformation.append(phoneIcon,phoneContactText,phoneContact);
+contactInformation.append(emailInformation,phoneInformation);
+
+  const formReviewDiv = document.createElement('div');
+  const formStar = document.createElement('span')
+  const formReview = document.createElement('textarea');
+  const formReviewButton = document.createElement('button');
+
   contactContainer.classList.add('contact');
   contactHeading.classList.add('page-heading');
   iframeMap.classList.add('map');
@@ -62,12 +92,13 @@ export const loadContactPage = () => {
   contactHeading.textContent = 'Contact Us';
   contactParagraph.textContent =
     'We would love to hear from you and will do our best to respond as soon as possible.';
-  formHeading.textContent = 'Send a message';
+  formHeading.textContent = 'Review Us';
 
   formFirstNameLabel.textContent = 'First Name *';
   formSecondNameLabel.textContent = 'Second Name *';
   formEmailLabel.textContent = 'Email *';
   formPhoneLabel.textContent = 'Phone *';
+
   formMessageLabel.textContent = 'Message *';
 
   formSubmitButton.textContent = 'Send';
@@ -88,6 +119,39 @@ export const loadContactPage = () => {
   formSecondNameInput.name = 'second_name';
   formEmailInput.name = 'email';
   formPhoneInput.name = 'phone';
+  formStar.classList.add('star');
+  formStar.textContent = "★"; //formstar .span nai ave??
+            // <div class="rating">
+            //     <span class="star" data-rating="5">★</span>
+            //     <span class="star" data-rating="4">★</span>
+            //     <span class="star" data-rating="3">★</span>
+            //     <span class="star" data-rating="2">★</span>
+            //     <span class="star" data-rating="1">★</span>
+            // </div>
+            // <p class="user-review">This product is amazing! I love it!</p>
+     
+// JavaScript to handle star rating interactivity
+document.querySelectorAll(".rating").forEach(function (rating) {
+  const stars = rating.querySelectorAll(".star");
+
+  stars.forEach(function (star) {
+      star.addEventListener("click", function () {
+          const ratingValue = parseInt(star.getAttribute("data-rating"));
+
+          // Reset all stars to gray
+          stars.forEach(function (s) {
+              s.classList.remove("active");
+          });
+
+          // Highlight selected stars
+          for (let i = 0; i < ratingValue; i++) {
+              stars[i].classList.add("active");
+          }
+      });
+  });
+});
+
+
   formMessageInput.name = 'message';
 
   formFirstNameInput.required = true;
@@ -111,7 +175,7 @@ export const loadContactPage = () => {
   formEmailDiv.append(formEmailLabel, formEmailInput);
   formPhoneDiv.append(formPhoneLabel, formPhoneInput);
   formMessageDiv.append(formMessageLabel, formMessageInput);
-
+  formReviewDiv.append(formStar);
   contactForm.append(
     formHeading,
     formUserNameDiv,
