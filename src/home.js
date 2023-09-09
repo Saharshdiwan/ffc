@@ -16,6 +16,7 @@ export const loadHomePage = () => {
   const aboutParagraph1 = document.createElement('p');
   const aboutPara = document.createElement('p');
   const storyContainer = document.createElement('div');
+  const storyHeadline = document.createElement('h1');
   const storyPara =document.createElement('p');
 
 // <-----Home Section----->
@@ -53,7 +54,10 @@ export const loadHomePage = () => {
 
 
  storyContainer.classList.add('story');
+ storyHeadline.classList.add('story-headLine');
 storyPara.classList.add('story-para')
+  
+storyHeadline.textContent = 'Our Story';
   storyPara.textContent="Funchick is an American inspired casual dining outlet. It is a result of our rich experience of the industry, especially developed for Indian taste buds. Funchick is a quick service restaurant serving a blend of traditional and innovative dishes. Our secret recipes and spices make our dishes unique and lip smacking. The focus of funchick Fried Chicken has always been quality and nutrition. Our customer can choose from our array of dishes to compliment the mood or style.The menu of Funchick Fried Chicken has a range for all moods be it delicious snacks, Flavours of grilled Chicken, wraps, Burger, Fries and much much more. There is no disappointment for our vegetarian lovers we serve verities of mouth watering vegetarian dishes as well. We want to make a Funchick store that appeals to the palette of the entire family and hence we have wide range to offer to our demanding Indian customers.";
 
   arrowRightIcon.setAttribute('src', 'components/icons/arrow-right.svg');
@@ -67,6 +71,6 @@ storyPara.classList.add('story-para')
   aboutContainer.append(aboutImage,aboutTextContainer);
   aboutTextContainer.append(aboutHeadline, aboutParagraph,aboutParagraph1,aboutPara);                
   contentDiv.append(aboutContainer);
-  storyContainer.append(storyPara);
+  storyContainer.append(storyHeadline,storyPara);
   contentDiv.append(storyContainer);
 };

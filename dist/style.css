@@ -404,7 +404,18 @@ header {
   color: #fff;
   padding: 20px;
   animation: 0.7s ease-in-out 0s 1 slideInFromLeft2;
+  padding-top: 5%;
+  padding-right: 28%;
  
+}
+.story-headLine{
+  font-weight: bolder;
+  color: #fff;
+  padding-left: 1%;
+  padding-top: 1%;
+
+  
+  
 }
 /* -- Menu -- */
 
