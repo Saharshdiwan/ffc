@@ -351,6 +351,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 42px;
+  text-align: justify;
 }
 .aboutHeadline {
   font-size: 3.5rem;
@@ -360,6 +361,8 @@ header {
   display: flex;
   flex-direction: column;
   gap: 42px;
+  font-size: 1.2rem;
+  animation: 0.7s ease-in-out 0s 1 slideInFromLeft2;
 }
 
 .aboutheadline {
@@ -367,13 +370,10 @@ header {
   animation: 0.6s ease-in-out 0s 1 slideInFromLeft1;
 }
 
-.about-paragraph {
-  font-size: 1.2rem;
-  animation: 0.7s ease-in-out 0s 1 slideInFromLeft2;
-}
 .about-para{
   font-weight: 800;
   font: bold;
+  
   font-size: 1.2rem;
   animation: 0.7s ease-in-out 0s 1 slideInFromLeft2;
 }
@@ -391,20 +391,27 @@ header {
 .about-image:hover {
   transform: translateY(-6px);
 }
-* .story {
+ .story {
+  
   margin-top: 5rem;
-  background-image: url('components/images/story-image.jpg') !important;
-     background-size: 100% ;/*Optional: Scale the image to cover the entire element */
-    background-repeat: no-repeat; /* Optional: Prevent the image from repeating */
-      
+  background-image: url('components/images/story-image.jpg') ;
+    background-size: 100% 100% ;/*Optional: Scale the image to cover the entire element */
+     background-repeat: no-repeat ; /*Optional: Prevent the image from repeating    */
     
 }
+
 .story-para{
   font-size: 1.2rem;
-  color: #fff;
-  padding: 20px;
+  text-align: justify;
+  padding: 4% 10% 25% 10% ;
   animation: 0.7s ease-in-out 0s 1 slideInFromLeft2;
- 
+  color: black !important;
+}
+.story-headLine{
+  padding-top: 2rem;
+  font-weight: bolder;
+  text-align: center;
+  color: black !important;
 }
 /* -- Menu -- */
 
