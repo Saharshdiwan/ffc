@@ -3,7 +3,7 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2022 codewithsadee
+ * copyright 2023 FunChick Fried Chicken
  */
 
 
@@ -375,9 +375,10 @@ body.active { overflow: hidden; }
   letter-spacing: -2px;
 }
 
-.logo .span {
-  display: inline-block;
+.logo .logo1 {
+  /* display: inline-block; */
   color: var(--deep-saffron);
+  width: 34%;
 }
 
 .header-btn-group {
@@ -1407,6 +1408,8 @@ textarea.input-field {
   .hero-img {
     position: absolute;
     bottom: 0;
+    padding:0 0 12rem 5rem;
+    
   }
 
   .hero::after {
