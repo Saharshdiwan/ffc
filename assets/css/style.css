@@ -1781,7 +1781,7 @@ textarea.input-field {
 
 /* star */
 
-.rating {
+/* .rating {
   display: flex;
   font-size: 0;
 }
@@ -1794,10 +1794,34 @@ textarea.input-field {
 }
 
 .star:hover {
-  transform: scale(1.2); /* Enlarge star on hover */
+  transform: scale(1.2); /* Enlarge star on hover 
   color: gold;
 }
 
 .star.active {
   color: gold;
+} */
+
+.rating{
+  
 }
+.rating .star{
+  display: flex;
+  grid-gap:20px;
+
+}
+.rating .star span{
+  transition: .6s;
+  color: #111;
+  font-size: 40px;
+  cursor: pointer;
+}
+.rating .star span:hover{
+  color: gold;
+}
+
+.rating .star span.active{
+  color:gold;
+
+}
+

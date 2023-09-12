@@ -1378,7 +1378,7 @@
                 class="input-field"
               />
             </div>
-            <div class="rating">
+            <!-- <div class="rating">
               <span class="star" data-rating="1">&#9733;</span>
               <span class="star" data-rating="2">&#9733;</span>
               <span class="star" data-rating="3">&#9733;</span>
@@ -1427,8 +1427,35 @@ function highlightStars(rating) {
     });
 }
 
+            </script> -->
+            <div class="rating">
+              <div class="star">
+              <!-- <a href="#" >&#9733;</a>
+              <a href="#" >&#9733;</a>
+              <a href="#" >&#9733;</a>
+              <a href="#" >&#9733;</a>
+              <a href="#" >&#9733;</a> -->
+              <span class="star1" data-rating="1">&#9733;</span>
+              <span class="star1" data-rating="2">&#9733;</span>
+              <span class="star1" data-rating="3">&#9733;</span>
+              <span class="star1" data-rating="4">&#9733;</span>
+              <span class="star1" data-rating="5">&#9733;</span>
+              </div>
+            </div>
+            <script>
+                 var stars=document.querySelectorAll('.star span');
+          
+              stars.forEach((item,index1) => {
+                item.addEventListener('click', 
+                () => {
+                   stars.forEach((star,index2) => {
+                                 index1 >= index2 ? star.classList.add('active'):star.classList.remove('active')
+                   }) 
+                   } )
+                 })
             </script>
-         
+            
+
         
             
             <textarea
@@ -1440,7 +1467,7 @@ function highlightStars(rating) {
             ></textarea>
             
               
-            <button type="submit" class="btn">Book a Table</button>
+            <button type="submit" class="btn">Add a review</button>
           </form> 
         </div>
       </div>
