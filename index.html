@@ -1356,7 +1356,7 @@
             </li> -->
           </ul>
 
-          <form action="/submit" id="review-form" class="footer-form">
+          <form  method="post" id="review-form" class="footer-form">
             <p class="footer-list-title">Review us</p>
 
             <div class="input-wrapper">
@@ -1448,10 +1448,14 @@
     <!-- 
     - ionicon link
   -->
+  <!-- <script src="../app.js"></script> -->
 <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js"></script>
 
 <script>
+  import { initializeApp } from "firebase/app";
+  import { getAnalytics } from "firebase/analytics";
+  
     var firebaseConfig = {
       apiKey: "AIzaSyBu9TrmL8ED1p7FWye70QPCpQ_PkC29qlY",
   authDomain: "funchick-c1ba8.firebaseapp.com",
@@ -1462,10 +1466,9 @@
     };
 
     // Initialize Firebase
+    
     firebase.initializeApp(firebaseConfig);
-</script>
-<script>
-  document.getElementById('review-form').addEventListener('submit', function (e) {
+     document.getElementById('review-form').addEventListener('submit', function (e) {
       e.preventDefault();
 
       var fullName = document.getElementById('full_name').value;
@@ -1496,29 +1499,27 @@
             console.log('Selected Rating:', selectedRating);
             
             // Your Firebase code to store the review data here
+            var newReviewRef = reviewsRef.push();
+             newReviewRef.set({
+             full_name: fullName,
+              email: email,
+             selectedRating:selectedRating,
+               message: message
+
+               
+            }, function (error) {
+            if (error) {
+               console.error('Error saving data:', error);
+           } else {
+                console.log('Data saved successfully!');
+               // Clear the form after submission
+               document.getElementById('review-form').reset();
+             }
+      });
+
         } else {
             console.error('Please select a rating.');
         }
-
-
-
-      
-      // Create a new review entry
-      var newReviewRef = reviewsRef.push();
-      newReviewRef.set({
-          full_name: fullName,
-          email: email,
-         selectedRating:selectedRating,
-          message: message
-      }, function (error) {
-          if (error) {
-              console.error('Error saving data:', error);
-          } else {
-              console.log('Data saved successfully!');
-              // Clear the form after submission
-              document.getElementById('review-form').reset();
-          }
-      });
   });
 </script>
 
