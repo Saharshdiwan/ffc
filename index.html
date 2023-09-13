@@ -1356,7 +1356,7 @@
             </li> -->
           </ul>
 
-          <form action="/submit" class="footer-form">
+          <form action="/submit" id="review-form" class="footer-form">
             <p class="footer-list-title">Review us</p>
 
             <div class="input-wrapper">
@@ -1367,8 +1367,9 @@
                 placeholder="Your Name"
                 aria-label="Your Name"
                 class="input-field"
+                id="full_name"
               />
-
+<!-- stars kvi rite laisu? -->
               <input
                 type="email"
                 name="email_address"
@@ -1376,17 +1377,18 @@
                 placeholder="Email"
                 aria-label="Email"
                 class="input-field"
+                id="email"
               />
             </div>
             <div class="rating">
-              <div class="star">
+              <div class="star" id="rating">
 
               <span class="star1" data-rating="1">&#9733;</span>
               <span class="star1" data-rating="2">&#9733;</span>
               <span class="star1" data-rating="3">&#9733;</span>
               <span class="star1" data-rating="4">&#9733;</span>
               <span class="star1" data-rating="5">&#9733;</span>
-              </div>
+              </div>                                  
             </div>
             <script>
                  var stars=document.querySelectorAll('.star span');
@@ -1407,6 +1409,7 @@
               placeholder="Comment"
               aria-label="Message"
               class="input-field"
+              id="message"
             ></textarea>
                
             <button type="submit" class="btn">Add a review</button>
@@ -1433,7 +1436,7 @@
       class="back-top-btn"
       aria-label="Back to top"
       data-back-top-btn
-    >
+    >   
       <ion-icon name="chevron-up"></ion-icon>
     </a>
 
@@ -1450,12 +1453,12 @@
 
 <script>
     var firebaseConfig = {
-        apiKey: "YOUR_API_KEY",
-        authDomain: "YOUR_AUTH_DOMAIN",
-        projectId: "YOUR_PROJECT_ID",
-        storageBucket: "YOUR_STORAGE_BUCKET",
-        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-        appId: "YOUR_APP_ID"
+      apiKey: "AIzaSyBu9TrmL8ED1p7FWye70QPCpQ_PkC29qlY",
+  authDomain: "funchick-c1ba8.firebaseapp.com",
+  projectId: "funchick-c1ba8",
+  storageBucket: "funchick-c1ba8.appspot.com",
+  messagingSenderId: "326986025678",
+  appId: "1:326986025678:web:ea32000e1cdcac3a631e9f",
     };
 
     // Initialize Firebase
@@ -1467,18 +1470,45 @@
 
       var fullName = document.getElementById('full_name').value;
       var email = document.getElementById('email').value;
-      var rating = parseInt(document.getElementById('rating').value);
       var message = document.getElementById('message').value;
 
       var database = firebase.database();
       var reviewsRef = database.ref('reviews');
+       var stars = document.querySelectorAll('.star1');
+        var selectedRating = null;
 
+    // Add click event listeners to each star
+    stars.forEach(function (star1) {
+        star.addEventListener('click', function () {
+            // Remove the 'active' class from all stars
+            stars.forEach(function (s) {
+                s.classList.remove('active');
+            });
+
+            // Add the 'active' class to the clicked star and set the selected rating
+            star1.classList.add('active');
+            selectedRating = parseInt(star.getAttribute('data-rating'));
+        });
+    });
+
+        if (selectedRating !== null) {
+            // Rating is selected; you can now use 'selectedRating' to store it in Firebase
+            console.log('Selected Rating:', selectedRating);
+            
+            // Your Firebase code to store the review data here
+        } else {
+            console.error('Please select a rating.');
+        }
+
+
+
+      
       // Create a new review entry
       var newReviewRef = reviewsRef.push();
       newReviewRef.set({
           full_name: fullName,
           email: email,
-          rating: rating,
+         selectedRating:selectedRating,
           message: message
       }, function (error) {
           if (error) {
