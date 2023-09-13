@@ -1356,7 +1356,7 @@
             </li> -->
           </ul>
 
-          <form action="" class="footer-form">
+          <form action="/submit" class="footer-form">
             <p class="footer-list-title">Review us</p>
 
             <div class="input-wrapper">
@@ -1378,63 +1378,9 @@
                 class="input-field"
               />
             </div>
-            <!-- <div class="rating">
-              <span class="star" data-rating="1">&#9733;</span>
-              <span class="star" data-rating="2">&#9733;</span>
-              <span class="star" data-rating="3">&#9733;</span>
-              <span class="star" data-rating="4">&#9733;</span>
-              <span class="star" data-rating="5">&#9733;</span>
-          </div>
-          <script>
-            const ratingContainer = document.querySelector('.rating');
-
-ratingContainer.addEventListener('mouseover', handleMouseOver);
-ratingContainer.addEventListener('mouseout', handleMouseOut);
-ratingContainer.addEventListener('click', handleClick);
-
-function handleMouseOver(event) {
-    if (event.target.classList.contains('star')) {
-        const rating = event.target.getAttribute('data-rating');
-        highlightStars(rating);
-    }
-}
-
-function handleMouseOut() {
-    const activeStar = document.querySelector('.star.active');
-    if (activeStar) {
-        const rating = activeStar.getAttribute('data-rating');
-        highlightStars(rating);
-    } else {
-        highlightStars(null);
-    }
-}
-
-function handleClick(event) {
-    if (event.target.classList.contains('star')) {
-        const rating = event.target.getAttribute('data-rating');
-        highlightStars(rating);
-    }
-}
-
-function highlightStars(rating) {
-    const stars = document.querySelectorAll('.star');
-    stars.forEach((star) => {
-        if (!rating || star.getAttribute('data-rating') <= rating) {
-            star.classList.add('active');
-        } else {
-            star.classList.remove('active');
-        }
-    });
-}
-
-            </script> -->
             <div class="rating">
               <div class="star">
-              <!-- <a href="#" >&#9733;</a>
-              <a href="#" >&#9733;</a>
-              <a href="#" >&#9733;</a>
-              <a href="#" >&#9733;</a>
-              <a href="#" >&#9733;</a> -->
+
               <span class="star1" data-rating="1">&#9733;</span>
               <span class="star1" data-rating="2">&#9733;</span>
               <span class="star1" data-rating="3">&#9733;</span>
@@ -1455,23 +1401,19 @@ function highlightStars(rating) {
                  })
             </script>
             
-
-        
-            
             <textarea
               name="message"
               required
-              placeholder="Message"
+              placeholder="Comment"
               aria-label="Message"
               class="input-field"
             ></textarea>
-            
-              
+               
             <button type="submit" class="btn">Add a review</button>
           </form> 
         </div>
       </div>
-
+<!-- baobar?? -->
       <div class="footer-bottom">
         <div class="container">
           <p class="copyright-text">
@@ -1503,6 +1445,53 @@ function highlightStars(rating) {
     <!-- 
     - ionicon link
   -->
+<script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js"></script>
+
+<script>
+    var firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script>
+  document.getElementById('review-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var fullName = document.getElementById('full_name').value;
+      var email = document.getElementById('email').value;
+      var rating = parseInt(document.getElementById('rating').value);
+      var message = document.getElementById('message').value;
+
+      var database = firebase.database();
+      var reviewsRef = database.ref('reviews');
+
+      // Create a new review entry
+      var newReviewRef = reviewsRef.push();
+      newReviewRef.set({
+          full_name: fullName,
+          email: email,
+          rating: rating,
+          message: message
+      }, function (error) {
+          if (error) {
+              console.error('Error saving data:', error);
+          } else {
+              console.log('Data saved successfully!');
+              // Clear the form after submission
+              document.getElementById('review-form').reset();
+          }
+      });
+  });
+</script>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -1513,3 +1502,4 @@ function highlightStars(rating) {
     ></script>
   </body>
 </html>
+
