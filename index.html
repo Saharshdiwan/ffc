@@ -25,7 +25,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
       rel="stylesheet"
     />
-
+  <!-- 
+    - Firebase
+  -->
+  <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.3.1/firebase-app.js"></script> 
     <!-- 
     - preload images
   -->
@@ -52,7 +55,6 @@
     <header class="header" data-header>
       <div class="container">
         <h1>
-          <!-- <a href="#" class="logo">Foodie<span class="span">.</span></a> -->
           <a href="#" class="logo"><img class="logo1" src="assets/images/logo1.png" alt="ffc"></img
             ></a>
         </h1>
@@ -71,10 +73,6 @@
               <a href="#food-menu" class="navbar-link" data-nav-link>Menu </a>
             </li>
 
-            <!-- <li class="nav-item">
-              <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
-            </li> -->
-
             <li class="nav-item">
               <a href="#contactus" class="navbar-link" data-nav-link>Contact Us</a>
             </li>
@@ -82,12 +80,11 @@
         </nav>
 
         <div class="header-btn-group">
-          <!-- <button class="search-btn" aria-label="Search" data-search-btn>
-            <ion-icon name="search-outline"></ion-icon>
-          </button> -->
-            <a href="http://zomato.com" target="_blank" rel="noopener noreferrer"> <button class="btn btn-hover">zomato</button></a>
-        
-
+      
+            <a href="http://zomato.com" target="_blank" rel="noopener noreferrer"> 
+              <button class="btn btn-hover">zomato
+              </button>
+          </a>   
           <button
             class="nav-toggle-btn"
             aria-label="Toggle Menu"
@@ -100,36 +97,6 @@
         </div>
       </div>
     </header>
-
-    <!-- 
-    - #SEARCH BOX
-  -->
-
-    <!-- <div class="search-container" data-search-container>
-      <div class="search-box">
-        <input
-          type="search"
-          name="search"
-          aria-label="Search here"
-          placeholder="Type keywords here..."
-          class="search-input"
-        />
-
-        <button
-          class="search-submit"
-          aria-label="Submit search"
-          data-search-submit-btn
-        >
-          <ion-icon name="search-outline"></ion-icon>
-        </button>
-      </div>
-
-      <button
-        class="search-close-btn"
-        aria-label="Cancel search"
-        data-search-close-btn
-      ></button>
-    </div> -->
 
     <main>
       <article>
@@ -409,13 +376,6 @@
                 class="w-100 about-img"
               />
 
-               <!-- <img
-                src="./assets/images/sale-shape-red.png"
-                width="216"
-                height="226"
-                alt="get up to 50% off now"
-                class="abs-img scale-up-anim"
-              />  -->
             </div>
 
             <div class="about-content">
@@ -477,27 +437,6 @@
               an organism.
             </p>
 
-            <!-- <ul class="fiter-list">
-              <li>
-                <button class="filter-btn active">All</button>
-              </li>
-
-              <li>
-                <button class="filter-btn">Pizza</button>
-              </li>
-
-              <li>
-                <button class="filter-btn">Burger</button>
-              </li>
-
-              <li>
-                <button class="filter-btn">Drinks</button>
-              </li>
-
-              <li>
-                <button class="filter-btn">Sandwich</button>
-              </li>
-            </ul> -->
 
             <ul class="food-menu-list">
               <li>
@@ -512,9 +451,6 @@
                       class="w-100"
                     />
 
-                    <!-- <div class="badge">-15%</div>
-
-                    < <button class="btn food-menu-btn">Order Now</button> -->
                   </div> 
 
                   <div class="wrapper">
@@ -552,10 +488,7 @@
                       alt="Burger King Whopper"
                       class="w-100"
                     />
-
-                    <!-- <div class="badge">-10%</div> -->
-
-                    <!-- <button class="btn food-menu-btn">Order Now</button> -->
+              
                   </div>
 
                   <div class="wrapper">
@@ -593,10 +526,7 @@
                       alt="White Castle Pizzas"
                       class="w-100"
                     />
-
-                    <!-- <div class="badge">-25%</div> -->
-
-                    <!-- <button class="btn food-menu-btn">Order Now</button> -->
+    
                   </div>
 
                   <div class="wrapper">
@@ -634,10 +564,7 @@
                       alt="Bell Burrito Supreme"
                       class="w-100"
                     />
-<!-- 
-                    <div class="badge">-20%</div> -->
 
-                    <!-- <button class="btn food-menu-btn">Order Now</button> -->
                   </div>
 
                   <div class="wrapper">
@@ -676,9 +603,6 @@
                       class="w-100"
                     />
 
-                    <!-- <div class="badge">-5%</div>
-
-                    <button class="btn food-menu-btn">Order Now</button> -->
                   </div>
 
                   <div class="wrapper">
@@ -717,9 +641,6 @@
                       class="w-100"
                     />
 
-                     <!-- <div class="badge">-15%</div>
-
-                   <button class="btn food-menu-btn">Order Now</button> -->
                   </div>
 
                   <div class="wrapper">
@@ -789,14 +710,7 @@
                 class="w-100 cta-img"
               />
 
-              <!-- <img
-                src="./assets/images/sale-shape.png"
-                width="216"
-                height="226"
-                loading="lazy"
-                alt="get up to 50% off now"
-                class="abs-img scale-up-anim" nasha??
-              /> -->
+
             </figure>
           </div>
         </section>
@@ -1067,194 +981,6 @@
           </div>
         </section>
 
-        <!-- 
-        - #BLOG
-      -->
-
-        <!-- <section class="section section-divider white blog" id="blog">
-          <div class="container">
-            <p class="section-subtitle">Latest Blog Posts</p>
-
-            <h2 class="h2 section-title">
-              This Is All About <span class="span">Foods</span>
-            </h2>
-
-            <p class="section-text">
-              Food is any substance consumed to provide nutritional support for
-              an organism.
-            </p>
-
-            <ul class="blog-list">
-              <li>
-                <div class="blog-card">
-                  <div class="card-banner">
-                    <img
-                      src="./assets/images/blog-1.jpg"
-                      width="600"
-                      height="390"
-                      loading="lazy"
-                      alt="What Do You Think About Cheese Pizza Recipes?"
-                      class="w-100"
-                    />
-
-                    <div class="badge">Pizza</div>
-                  </div>
-
-                  <div class="card-content">
-                    <div class="card-meta-wrapper">
-                      <a href="#" class="card-meta-link">
-                        <ion-icon name="calendar-outline"></ion-icon>
-
-                        <time class="meta-info" datetime="2022-01-01"
-                          >Jan 01 2022</time
-                        >
-                      </a>
-
-                      <a href="#" class="card-meta-link">
-                        <ion-icon name="person-outline"></ion-icon>
-
-                        <p class="meta-info">Jonathan Smith</p>
-                      </a>
-                    </div>
-
-                    <h3 class="h3">
-                      <a href="#" class="card-title"
-                        >What Do You Think About Cheese Pizza Recipes?</a
-                      >
-                    </h3>
-
-                    <p class="card-text">
-                      Financial experts support or help you to to find out which
-                      way you can raise your funds more...
-                    </p>
-
-                    <a href="#" class="btn-link">
-                      <span>Read More</span>
-
-                      <ion-icon
-                        name="arrow-forward"
-                        aria-hidden="true"
-                      ></ion-icon>
-                    </a>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div class="blog-card">
-                  <div class="card-banner">
-                    <img
-                      src="./assets/images/blog-2.jpg"
-                      width="600"
-                      height="390"
-                      loading="lazy"
-                      alt="Making Chicken Strips With New Delicious Ingridents."
-                      class="w-100"
-                    />
-
-                    <div class="badge">Burger</div>
-                  </div>
-
-                  <div class="card-content">
-                    <div class="card-meta-wrapper">
-                      <a href="#" class="card-meta-link">
-                        <ion-icon name="calendar-outline"></ion-icon>
-
-                        <time class="meta-info" datetime="2022-01-01"
-                          >Jan 01 2022</time
-                        >
-                      </a>
-
-                      <a href="#" class="card-meta-link">
-                        <ion-icon name="person-outline"></ion-icon>
-
-                        <p class="meta-info">Jonathan Smith</p>
-                      </a>
-                    </div>
-
-                    <h3 class="h3">
-                      <a href="#" class="card-title"
-                        >Making Chicken Strips With New Delicious Ingridents.</a
-                      >
-                    </h3>
-
-                    <p class="card-text">
-                      Financial experts support or help you to to find out which
-                      way you can raise your funds more...
-                    </p>
-
-                    <a href="#" class="btn-link">
-                      <span>Read More</span>
-
-                      <ion-icon
-                        name="arrow-forward"
-                        aria-hidden="true"
-                      ></ion-icon>
-                    </a>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div class="blog-card">
-                  <div class="card-banner">
-                    <img
-                      src="./assets/images/blog-3.jpg"
-                      width="600"
-                      height="390"
-                      loading="lazy"
-                      alt="Innovative Hot Chessyraw Pasta Make Creator Fact."
-                      class="w-100"
-                    />
-
-                    <div class="badge">Chicken</div>
-                  </div>
-
-                  <div class="card-content">
-                    <div class="card-meta-wrapper">
-                      <a href="#" class="card-meta-link">
-                        <ion-icon name="calendar-outline"></ion-icon>
-
-                        <time class="meta-info" datetime="2022-01-01"
-                          >Jan 01 2022</time
-                        >
-                      </a>
-
-                      <a href="#" class="card-meta-link">
-                        <ion-icon name="person-outline"></ion-icon>
-
-                        <p class="meta-info">Jonathan Smith</p>
-                      </a>
-                    </div>
-
-                    <h3 class="h3">
-                      <a href="#" class="card-title"
-                        >Innovative Hot Chessyraw Pasta Make Creator Fact.</a
-                      >
-                    </h3>
-
-                    <p class="card-text">
-                      Financial experts support or help you to to find out which
-                      way you can raise your funds more...
-                    </p>
-
-                    <a href="#" class="btn-link">
-                      <span>Read More</span>
-
-                      <ion-icon
-                        name="arrow-forward"
-                        aria-hidden="true"
-                      ></ion-icon>
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </article>
-    </main> -->
-
     <!-- 
     - #FOOTER
   -->
@@ -1345,16 +1071,9 @@
             <li>
               <p class="footer-list-item">Monday-Sunday: 12:00-23:00</p>
             </li>
-<!-- 
-            <li>
-              <p class="footer-list-item">Tuesday 4PM: Till Mid Night</p>
-            </li>
-            <li>
-              <p class="footer-list-item">Saturday: 10:00-16:00</p>
-            </li> -->
           </ul>
 
-          <form  method="post" id="review-form" class="footer-form">
+          <form action="" id="reviewform" class="footer-form">
             <p class="footer-list-title">Review us</p>
 
             <div class="input-wrapper">
@@ -1367,7 +1086,6 @@
                 class="input-field"
                 id="full_name"
               />
-<!-- stars kvi rite laisu? -->
               <input
                 type="email"
                 name="email_address"
@@ -1414,7 +1132,6 @@
           </form> 
         </div>
       </div>
-<!-- baobar?? -->
       <div class="footer-bottom">
         <div class="container">
           <p class="copyright-text">
@@ -1441,86 +1158,13 @@
     <!-- 
     - custom js link
   -->
-    <script src="./assets/js/script.js" defer></script>
-
+  
+  <script src="./assets/js/script.js" defer></script>
+  <script src="app.js"></script>
+  
     <!-- 
     - ionicon link
   -->
-  <!-- <script src="../app.js"></script> -->
-<script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js"></script>
-
-<script>
-  import { initializeApp } from "firebase/app";
-  import { getAnalytics } from "firebase/analytics";
-  
-    var firebaseConfig = {
-      apiKey: "AIzaSyBu9TrmL8ED1p7FWye70QPCpQ_PkC29qlY",
-  authDomain: "funchick-c1ba8.firebaseapp.com",
-  projectId: "funchick-c1ba8",
-  storageBucket: "funchick-c1ba8.appspot.com",
-  messagingSenderId: "326986025678",
-  appId: "1:326986025678:web:ea32000e1cdcac3a631e9f",
-    };
-
-    // Initialize Firebase
-    
-    firebase.initializeApp(firebaseConfig);
-     document.getElementById('review-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      var fullName = document.getElementById('full_name').value;
-      var email = document.getElementById('email').value;
-      var message = document.getElementById('message').value;
-
-      var database = firebase.database();
-      var reviewsRef = database.ref('reviews');
-       var stars = document.querySelectorAll('.star1');
-        var selectedRating = null;
-
-    // Add click event listeners to each star
-    stars.forEach(function (star1) {
-        star.addEventListener('click', function () {
-            // Remove the 'active' class from all stars
-            stars.forEach(function (s) {
-                s.classList.remove('active');
-            });
-
-            // Add the 'active' class to the clicked star and set the selected rating
-            star1.classList.add('active');
-            selectedRating = parseInt(star.getAttribute('data-rating'));
-        });
-    });
-
-        if (selectedRating !== null) {
-            // Rating is selected; you can now use 'selectedRating' to store it in Firebase
-            console.log('Selected Rating:', selectedRating);
-            
-            // Your Firebase code to store the review data here
-            var newReviewRef = reviewsRef.push();
-             newReviewRef.set({
-             full_name: fullName,
-              email: email,
-             selectedRating:selectedRating,
-               message: message
-
-               
-            }, function (error) {
-            if (error) {
-               console.error('Error saving data:', error);
-           } else {
-                console.log('Data saved successfully!');
-               // Clear the form after submission
-               document.getElementById('review-form').reset();
-             }
-      });
-
-        } else {
-            console.error('Please select a rating.');
-        }
-  });
-</script>
-
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
