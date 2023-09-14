@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foodie - Supper delicious Burger in town!</title>
+    <title>Funchick fried chicken FFC !</title>
 
     <!-- 
     - favicon
@@ -25,10 +25,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
       rel="stylesheet"
     />
-  <!-- 
-    - Firebase
-  -->
-  <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.3.1/firebase-app.js"></script> 
+ 
     <!-- 
     - preload images
   -->
@@ -1076,7 +1073,7 @@
             </li>
           </ul>
 
-          <form action="" id="reviewform" class="footer-form">
+          <form id="reviewform" class="footer-form">
             <p class="footer-list-title">Review us</p>
 
             <div class="input-wrapper">
@@ -1110,18 +1107,18 @@
               </div>                                  
             </div>
             <script>
-                 var stars=document.querySelectorAll('.star span');
+                 var stars3=document.querySelectorAll('.star span');
           
-              stars.forEach((item,index1) => {
+              stars3.forEach((item,index1) => {
                 item.addEventListener('click', 
                 () => {
-                   stars.forEach((star,index2) => {
+                   stars3.forEach((star,index2) => {
                                  index1 >= index2 ? star.classList.add('active'):star.classList.remove('active')
                    }) 
                    } )
                  })
             </script>
-            
+             
             <textarea
               name="message"
               required
@@ -1163,7 +1160,7 @@
   -->
   
   <script src="./assets/js/script.js" defer></script>
-  <script src="app.js"></script>
+  
   
     <!-- 
     - ionicon link
@@ -1176,6 +1173,11 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+     <!-- 
+    - Firebase
+  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+  <script src="./app.js"></script>
   </body>
 </html>
 
