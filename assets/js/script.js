@@ -1,6 +1,4 @@
-'use strict';
-
-
+"use strict";
 
 /**
  * navbar toggle
@@ -22,8 +20,6 @@ for (let i = 0; i < navbarLinks.length; i++) {
   });
 }
 
-
-
 /**
  * header sticky & back to top
  */
@@ -41,28 +37,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-
-
-/**
- * search box toggle
- */
-
-const searchBtn = document.querySelector("[data-search-btn]");
-const searchContainer = document.querySelector("[data-search-container]");
-const searchSubmitBtn = document.querySelector("[data-search-submit-btn]");
-const searchCloseBtn = document.querySelector("[data-search-close-btn]");
-
-const searchBoxElems = [searchBtn, searchSubmitBtn, searchCloseBtn];
-
-for (let i = 0; i < searchBoxElems.length; i++) {
-  searchBoxElems[i].addEventListener("click", function () {
-    searchContainer.classList.toggle("active");
-    document.body.classList.toggle("active");
-  });
-}
-
-
-
 /**
  * move cycle on scroll
  */
@@ -73,7 +47,6 @@ let deliveryBoyMove = -80;
 let lastScrollPos = 0;
 
 window.addEventListener("scroll", function () {
-
   let deliveryBoyTopPos = deliveryBoy.getBoundingClientRect().top;
 
   if (deliveryBoyTopPos < 500 && deliveryBoyTopPos > -250) {
@@ -88,5 +61,4 @@ window.addEventListener("scroll", function () {
     lastScrollPos = activeScrollPos;
     deliveryBoy.style.transform = `translateX(${deliveryBoyMove}px)`;
   }
-
 });
