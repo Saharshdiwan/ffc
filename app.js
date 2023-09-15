@@ -1,14 +1,12 @@
-require('dotenv').config(); // Load environment variables from .env file
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
-  authDomain: process.env.AUTH_DOMAIN,
-  databaseURL: process.env.DATABASE_URL,
-  projectId: process.env.PROJECT_ID,
-  storageBucket: process.env.STORAGE_BUCKET,
-  messagingSenderId: process.env.MESSAGING_SENDER_ID,
-  appId: process.env.APP_ID,
+  apiKey: "AIzaSyBkk4TGOTftMPdj4C1YowP8aBmyYM3lH3g",
+    authDomain: "ffc-rev.firebaseapp.com",
+    databaseURL: "https://ffc-rev-default-rtdb.firebaseio.com",
+    projectId: "ffc-rev",
+    storageBucket: "ffc-rev.appspot.com",
+    messagingSenderId: "832980135735",
+    appId: "1:832980135735:web:8828c64412ebe8444d34b2"
 };
 
 firebase.initializeApp(firebaseConfig);
