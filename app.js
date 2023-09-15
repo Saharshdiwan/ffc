@@ -1,13 +1,16 @@
+require('dotenv').config(); // Load environment variables from .env file
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBkk4TGOTftMPdj4C1YowP8aBmyYM3lH3g",
-  authDomain: "ffc-rev.firebaseapp.com",
-  databaseURL: "https://ffc-rev-default-rtdb.firebaseio.com",
-  projectId: "ffc-rev",
-  storageBucket: "ffc-rev.appspot.com",
-  messagingSenderId: "832980135735",
-  appId: "1:832980135735:web:8828c64412ebe8444d34b2",
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  databaseURL: process.env.DATABASE_URL,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
 };
+
 firebase.initializeApp(firebaseConfig);
 
 var contactFormDB = firebase.database().ref("reviewform");
@@ -22,7 +25,7 @@ function submitForm(e) {
   var message = getElementVal("message");
   var rating = getSelectedRating(); // Get the selected rating
 
-  console.log(full_name, email, message, rating); // for testing
+  //console.log(full_name, email, message, rating); // for testing
   saveMessages(full_name, email, message, rating);
 
   //   reset the form
@@ -59,10 +62,10 @@ const getSelectedRating = () => {
 };
 
 // Add click event listeners to the stars for rating selection
-// const stars = document.querySelectorAll(".star1");
-// stars.forEach((star) => {
-//   star.addEventListener("click", () => {
-//     stars.forEach((s) => s.classList.remove("selected"));
-//     star.classList.add("selected");
-//   });
-// });
+const stars = document.querySelectorAll(".star1");
+stars.forEach((star) => {
+  star.addEventListener("click", () => {
+    stars.forEach((s) => s.classList.remove("selected"));
+    star.classList.add("selected");
+  });
+});
