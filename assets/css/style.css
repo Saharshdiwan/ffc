@@ -1825,3 +1825,40 @@ textarea.input-field {
 
 }
 
+/* Review Message */
+
+
+/* Default styles for all devices */
+.message {
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.success {
+  background-color: #4caf50;
+  color: white;
+}
+
+.error {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Responsive styles for smaller screens (e.g., mobile phones) */
+@media (max-width: 768px) {
+  .message {
+    font-size: 11px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Responsive styles for tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .message {
+    font-size: 14px; /* Adjust font size for tablets */
+  }
+}
+
+
+

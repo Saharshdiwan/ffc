@@ -7,7 +7,7 @@ const firebaseConfig = {
     storageBucket: "ffc-rev.appspot.com",
     messagingSenderId: "832980135735",
     appId: "1:832980135735:web:8828c64412ebe8444d34b2"
-};
+};//alert html maj ap
 
 firebase.initializeApp(firebaseConfig);
 
@@ -26,8 +26,13 @@ function submitForm(e) {
   //console.log(full_name, email, message, rating); // for testing
   saveMessages(full_name, email, message, rating);
 
+  // Display success message
+  showMessage("Review submitted successfully!", "success");
+
   //   reset the form
   document.getElementById("reviewform").reset();
+
+   
 }
 
 const saveMessages = (full_name, email, message, rating) => {
@@ -38,7 +43,14 @@ const saveMessages = (full_name, email, message, rating) => {
     email: email,
     message: message,
     rating: rating,
-  });
+  },(error) => {
+    if (error) {
+      showMessage("Error submitting review. Please try again later.", "error");
+    } else {
+      showMessage("Review submitted successfully!", "success");
+    }
+  }
+  );
 };
 
 const getElementVal = (id) => {
@@ -67,3 +79,11 @@ stars.forEach((star) => {
     star.classList.add("selected");
   });
 });
+
+
+function showMessage(message, type) {
+  const messageDiv = document.getElementById("form-messages");
+  messageDiv.textContent = message;
+  messageDiv.className = "message " + type; // Add the message type as a class
+}
+
