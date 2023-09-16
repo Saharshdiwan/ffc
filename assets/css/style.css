@@ -698,6 +698,7 @@ body.active { overflow: hidden; }
 .food-menu {
   background-color: var(--isabelline);
   text-align: center;
+  
 }
 
 .food-menu .section-title { margin-block: 10px 20px; }
